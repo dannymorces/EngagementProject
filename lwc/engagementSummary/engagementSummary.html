@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Engagement Summary">
+        <template if:true={loading}>
+            <p>Loading...</p>
+        </template>
+
+        <template if:false={loading}>
+            <p><b>Engagement:</b> {engagementName}</p>
+            <p><b>Opportunity Amount:</b> {opportunityAmount}</p>
+            <p><b>Completed Tasks:</b> {completedTasks}</p>
+            <p><b>Upcoming Events:</b> {upcomingEvents}</p>
+
+            <lightning-button 
+                label="Quick Follow-Up Call"
+                variant="brand"
+                onclick={handleQuickFollowUp}>
+            </lightning-button>
+        </template>
+    </lightning-card>
+</template>
+
